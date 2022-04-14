@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Форма отзыва об отдыхе в Седоне</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page__header">
@@ -26,6 +27,7 @@
     </header>
     <main class="page__main">
       <section class="greetings">
+        <img class="greetings__image greetings__image--inner" src="./img/greetings-inner-image.png" width="229" height="39" alt="Седона">
         <h1 class="greetings__title">Оставьте свой отзыв</h1>
         <p class="greetings__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </section>
@@ -50,19 +52,22 @@
           <legend class="form__title">Ваше общее впечатление:</legend>
           <ul class="form__list">
             <li class="form__item">
-              <label class="form__label form__label--checkbox" for="good-emotions">Скорее положительное</label>
-              <span class="form__input-radio"></span>
-              <input class="visually-hidden" type="radio" id="good-emotions" name="emotions" value="good-emotions" checked>
+              <label class="form__label form__label--checkbox" for="good-emotions">
+                <input class="visually-hidden form__input-radio" type="radio" id="good-emotions" name="emotions" value="good-emotions" checked>
+                <span class="form__marker-radio"></span>Скорее положительное
+              </label>
             </li>
             <li class="form__item">
-              <label class="form__label form__label--checkbox" for="bad-emotions">Скорее отрицательное</label>
-              <span class="form__input-radio"></span>
-              <input class="visually-hidden" type="radio" id="bad-emotions" name="emotions" value="bad-emotions">
+              <label class="form__label form__label--checkbox" for="bad-emotions">
+                <input class="visually-hidden form__input-radio" type="radio" id="bad-emotions" name="emotions" value="bad-emotions">
+                <span class="form__marker-radio"></span>Скорее отрицательное
+              </label>
             </li>
             <li class="form__item">
-              <label class="form__label form__label--checkbox" for="no-emotions">Затрудняюсь ответить</label>
-              <span class="form__input-radio"></span>
-              <input class="visually-hidden" type="radio" id="no-emotions" name="emotions" value="no-emotions">
+              <label class="form__label form__label--checkbox" for="no-emotions">
+                <input class="visually-hidden form__input-radio" type="radio" id="no-emotions" name="emotions" value="no-emotions">
+                <span class="form__marker-radio"></span>Затрудняюсь ответить
+              </label>
             </li>
           </ul>
         </fieldset>
@@ -70,24 +75,28 @@
           <legend class="form__title">Посещенные достопримечательности:</legend>
           <ul class="form__list">
             <li class="form__item">
-              <label class="form__label form__label--checkbox" for="devil-bridge">Мост Дьявола</label>
-              <span class="form__input-checkbox"></span>
-              <input class="visually-hidden" type="checkbox" id="devil-bridge" name="devil-bridge" checked>
+              <label class="form__label form__label--checkbox" for="devil-bridge">
+                <input class="visually-hidden form__input-checkbox" type="checkbox" id="devil-bridge" name="devil-bridge" checked>
+                <span class="form__marker-checkbox"></span>Мост Дьявола
+              </label>
             </li>
             <li class="form__item">
-              <label class="form__label form__label--checkbox" for="bell-mountain">Гора-Колокол</label>
-              <span class="form__input-checkbox"></span>
-              <input class="visually-hidden" type="checkbox" id="bell-mountain" name="bell-mountain" checked>
+              <label class="form__label form__label--checkbox" for="bell-mountain">
+                <input class="visually-hidden form__input-checkbox" type="checkbox" id="bell-mountain" name="bell-mountain" checked>
+                <span class="form__marker-checkbox"></span>Гора-Колокол
+              </label>
             </li>
             <li class="form__item">
-              <label class="form__label form__label--checkbox" for="slide-park">Слайд-парк</label>
-              <span class="form__input-checkbox"></span>
-              <input class="visually-hidden" type="checkbox" id="slide-park" name="slide-park" checked>
+              <label class="form__label form__label--checkbox" for="slide-park">
+                <input class="visually-hidden form__input-checkbox" type="checkbox" id="slide-park" name="slide-park" checked>
+                <span class="form__marker-checkbox"></span>Слайд-парк
+              </label>
             </li>
             <li class="form__item">
-              <label class="form__label form__label--checkbox" for="red-rocks">Красные скалы</label>
-              <span class="form__input-checkbox"></span>
-              <input class="visually-hidden" type="checkbox" id="red-rocks" name="red-rocks">
+              <label class="form__label form__label--checkbox" for="red-rocks">
+                <input class="visually-hidden form__input-checkbox" type="checkbox" id="red-rocks" name="red-rocks">
+                <span class="form__marker-checkbox"></span>Красные скалы
+              </label>
             </li>
           </ul>
         </fieldset>
@@ -105,39 +114,43 @@
         <p class="social__title">#visitSEDONA</p>
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="button social__link" href="#">
               <span class="visually-hidden">Наш вконтаке</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="button social__link" href="#">
               <span class="visually-hidden">Наш телеграмм</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="button social__link" href="#">
               <span class="visually-hidden">Наш канал на YouTube</span>
             </a>
           </li>
         </ul>
         <div class="developer">
-          <p class="developer__text">Разработано:</p>
           <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+            <p class="developer__text">Разработано:</p>
             <span class="visually-hidden">Лендинг интенсива «HTML и CSS. Адаптивная вёрстка и автоматизация».</span>
           </a>
         </div>
       </section>
     </footer>
     <div class="page__modal page__modal--error page__modal--hidden modal">
-      <h2 class="modal__title">Что-то пошло не так!</h2>
-      <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="modal__button button" type="button">ОК</button>
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Что-то пошло не так!</h2>
+        <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="modal__button modal__button--error button" type="button">ОК</button>
+      </div>
     </div>
     <div class="page__modal page__modal--success page__modal--hidden modal">
-      <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-      <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы опубликуем его на сайте.</p>
-      <div class="modal__button-wrapper">
-        <button class="modal__button button" type="button">закрыть окно</button>
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+        <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы опубликуем его на сайте.</p>
+        <div class="modal__button-wrapper">
+          <button class="modal__button modal__button--success button" type="button">закрыть окно</button>
+        </div>
       </div>
     </div>
   </body>
