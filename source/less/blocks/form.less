@@ -1,7 +1,6 @@
 .form {
   display: flex;
-  flex-direction: column;
-  width: 320px;
+  flex-wrap: wrap;
   margin: 0 auto;
   padding-top: 24px;
   box-sizing: border-box;
@@ -12,6 +11,7 @@
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
+  width: 100%;
   margin: 0;
   padding-top: 20px;
   padding-right: 20px;
@@ -41,7 +41,7 @@
 }
 
 .form__input-text {
-  font-family: "PT sans", sans-serif;
+  font-family: "PT sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -144,7 +144,7 @@
 
 .form__input-comment {
   resize: none;
-  font-family: "PT sans", sans-serif;
+  font-family: "PT sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -158,12 +158,12 @@
 .form__button {
   align-self: center;
   width: 280px;
-  margin-bottom: 3px;
+  margin: 0 auto 3px;
 }
 
 .form__required-text {
   text-transform: uppercase;
-  color: fade(@light-black, 60%);
-  align-self: flex-end;
+  color: rgba(@light-black, 0.6);
   margin-right: 20px;
+  margin-left: auto;
 }

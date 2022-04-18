@@ -1,40 +1,54 @@
 .greetings {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 0 auto;
   text-align: center;
   text-transform: uppercase;
 }
 
+.greetings::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 389px;
+  top: 0;
+  left: 0;
+  background-color: rgba(@main-blue, 0.6);
+  background-image: url("../img/greetings-bg.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.greetings--inner::before {
+  background-position-y: bottom;
+  height: 158px;
+}
+
 .greetings__image {
   display: block;
-  margin: 0;
-  padding: 87px 20px;
-  background-color: fade(@main-blue, 60%);
-  background-image: url("../img/greetings-bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 32px;
+  margin: 87px auto 117px;
 }
 
 .greetings__image--inner {
-  padding-top: 52px;
-  padding-bottom: 67px;
+  margin-top: 52px;
+  margin-bottom: 103px;
 }
 
 .greetings__title {
+  background-color: #ffffff;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   margin: 0;
-  padding: 0;
   margin-bottom: 35px;
 }
 
 .greetings__text {
+  background-color: #ffffff;
   color: @light-black;
   margin: 0;
-  padding: 0;
   margin-bottom: 32px;
 }
