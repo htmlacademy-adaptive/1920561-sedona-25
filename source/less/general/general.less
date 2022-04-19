@@ -1,0 +1,34 @@
+.button {
+  cursor: pointer;
+  font-family: "PT sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: 280px;
+  height: 58px;
+  border: none;
+  box-sizing: border-box;
+  background-color: @main-blue;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: @main-blue-hover;
+}
+
+.button:active {
+  color: rgba(#ffffff, 0.3);
+  background-color: @main-blue-active;
+}
+
+.button:disabled {
+  color: #ffffff;
+  background-color: #e5e5e5;
+}
