@@ -407,8 +407,6 @@ template {
 }
 .greetings {
   position: relative;
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   text-align: center;
   text-transform: uppercase;
@@ -433,11 +431,12 @@ template {
 }
 .greetings__image {
   display: block;
-  margin: 87px auto 117px;
+  margin: 0 auto 30px;
+  padding: 87px 19px 88px;
 }
 .greetings__image--inner {
-  margin-top: 52px;
-  margin-bottom: 103px;
+  padding-top: 52px;
+  padding-bottom: 67px;
 }
 .greetings__title {
   background-color: #ffffff;
@@ -467,10 +466,7 @@ template {
   flex-direction: column;
   align-items: center;
   background-color: #eeeeee;
-  padding-top: 25px;
-  padding-right: 20px;
-  padding-bottom: 25px;
-  padding-left: 20px;
+  padding: 25px 20px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -480,10 +476,7 @@ template {
 .advantages__item:first-of-type {
   background-color: #81b3d2;
   color: #ffffff;
-  padding: 0;
-  padding-top: 54px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 54px 20px 0;
   border: none;
 }
 .advantages__item:first-of-type .advantages__text:last-of-type {
@@ -492,10 +485,7 @@ template {
 .advantages__item:nth-of-type(2) {
   background-color: #81b3d2;
   color: #ffffff;
-  padding: 0;
-  padding-top: 39px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 39px 20px 0;
   border: none;
 }
 .advantages__item:nth-of-type(2) .advantages__text:last-of-type {
@@ -533,8 +523,6 @@ template {
   width: 100%;
 }
 .advantages-sub-list__item {
-  display: flex;
-  flex-direction: column;
   margin-left: 32px;
 }
 .advantages-sub-list__title {
@@ -554,9 +542,7 @@ template {
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 38px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 38px 20px 0;
 }
 .advertising__title {
   font-size: 21px;
@@ -579,8 +565,7 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 39px;
-  padding-bottom: 22px;
+  padding: 39px 20px 22px;
 }
 .social__title {
   font-weight: 700;
@@ -624,11 +609,7 @@ template {
   padding: 0;
 }
 .feed__item {
-  padding: 0;
-  padding-top: 25px;
-  padding-right: 20px;
-  padding-bottom: 25px;
-  padding-left: 20px;
+  padding: 25px 20px;
   border-top: 1px solid #e5e5e5;
 }
 .feed__item:last-of-type {
@@ -665,13 +646,9 @@ template {
   padding: 0;
 }
 .presentation {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 17px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 17px 20px 0;
 }
 .presentation__title {
   font-weight: 700;
@@ -697,10 +674,7 @@ template {
   text-transform: uppercase;
   width: 100%;
   margin: 0;
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 39px;
-  padding-left: 20px;
+  padding: 20px 20px 39px;
   margin-bottom: 24px;
   border: none;
   border-bottom: 1px solid #e5e5e5;
@@ -832,6 +806,8 @@ template {
 }
 .modal {
   position: fixed;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
@@ -852,9 +828,7 @@ template {
   text-align: center;
   box-sizing: border-box;
   text-transform: uppercase;
-  padding-top: 45px;
-  padding-right: 42px;
-  padding-left: 42px;
+  padding: 45px 42px 0;
 }
 .modal__title {
   font-size: 18px;
