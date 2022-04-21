@@ -8,10 +8,24 @@
   margin: 0;
   padding: 23px 20px 52px;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    grid-column: 1 / -1;
+    grid-template-rows: none;
+    height: 330px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .advantages-sub-list__item {
   margin-left: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    text-align: center;
+    padding: 0 20px;
+  }
 }
 
 .advantages-sub-list__title {
@@ -20,6 +34,10 @@
   line-height: 26px;
   margin: 0;
   margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 158px;
+  }
 }
 
 .advantages-sub-list__text {

@@ -7,7 +7,6 @@
 
 .greetings::before {
   content: "";
-  z-index: -1;
   position: absolute;
   display: block;
   width: 100%;
@@ -18,6 +17,12 @@
   background-image: url("../img/greetings-bg.jpg");
   background-position: top;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    height: 518px;
+    background-image: url("../img/greetings-bg-tablet-desktop.jpg");
+    background-position: center;
+  }
 }
 
 .greetings--inner::before {
@@ -26,9 +31,22 @@
 }
 
 .greetings__image {
+  position: relative;
   display: block;
   margin: 0 auto 30px;
   padding: 87px 19px 88px;
+
+  @media (min-width: @tablet-width) {
+    width: 461px;
+    height: 350px;
+    padding-bottom: 80px;
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 80px;
+    margin-bottom: 59px;
+  }
 }
 
 .greetings__image--inner {
@@ -41,13 +59,27 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  margin: 0;
-  margin-bottom: 35px;
+  margin: 0 auto 35px auto;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 21px;
+    max-width: 400px;
+    margin-bottom: 21px;
+  }
 }
 
 .greetings__text {
   background-color: #ffffff;
   color: @light-black;
-  margin: 0;
-  margin-bottom: 32px;
+  margin: 0 auto 32px auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 520px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 44px;
+  }
 }
