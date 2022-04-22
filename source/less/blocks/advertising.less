@@ -5,6 +5,10 @@
   text-align: center;
   text-transform: uppercase;
   padding: 38px 20px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 61px 0 0;
+  }
 }
 
 .advertising__title {
@@ -12,18 +16,38 @@
   line-height: 26px;
   margin: 0;
   margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    margin-bottom: 21px;
+  }
 }
 
 .advertising__text {
   color: @light-black;
   margin: 0;
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 435px;
+    margin-bottom: 40px;
+  }
 }
 
 .advertising__link {
   margin-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    width: 458px;
+    margin-bottom: 58px;
+  }
 }
 
 .advertising__map {
   border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    height: 350px;
+  }
 }
