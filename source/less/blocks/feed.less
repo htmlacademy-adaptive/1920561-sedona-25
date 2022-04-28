@@ -1,3 +1,15 @@
+.feed {
+  @media (min-width: @tablet-width) {
+    padding-top: 7px;
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 21px;
+    margin-bottom: 77px;
+  }
+}
+
 .feed__list {
   display: flex;
   flex-wrap: wrap;
@@ -5,33 +17,109 @@
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .feed__item {
   padding: 25px 20px;
   border-top: 1px solid #e5e5e5;
+
+  &:last-of-type {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border: none;
+    background-color: @light-grey;
+
+    &:nth-of-type(odd) {
+      background-color: #eaeaea;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
 }
 
-.feed__item:last-of-type {
-  border-bottom: 1px solid #e5e5e5;
+.feed__item--panorama {
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / -1;
+  }
 }
 
 .feed__img {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    height: 267px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+  }
+}
+
+.feed__img--panorama {
+  @media (min-width: @tablet-width) {
+    background-color: @light-grey;
+    width: 648px;
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
 }
 
 .feed__wrapper {
   margin-top: 15px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 22px 20px 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: rgba(#000000, 0.3);
+    z-index: 1;
+    top: 100%;
+    transform: translateY(-100%);
+  }
 }
 
 .feed__title {
   margin: 0;
   text-transform: uppercase;
+  font-size: 14px;
 }
 
 .feed__text {
   margin: 0;
   margin-bottom: 11px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .feed__likes {
