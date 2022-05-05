@@ -10,8 +10,9 @@
     <header class="page__header">
       <nav class="navigation">
         <a class="navigation__logo-link"></a>
-        <ul class="navigation__list">
-          <li class="navigation__item">
+        <button class="navigation__button navigation__button--no-js" type="button"><span class="visually-hidden">Открыть меню навигации</span></button>
+        <ul class="navigation__list navigation__list--no-js">
+          <li class="navigation__item navigation__item--current">
             <a class="navigation__link navigation__link--current">Главная</a>
           </li>
           <li class="navigation__item">
@@ -44,15 +45,15 @@
             </div>
             <img class="advantages__photo" src="./img/advantages-photo-city.jpg" alt="Город Седона">
             <ul class="advantages-sub-list">
-              <li class="advantages-sub-list__item">
+              <li class="advantages-sub-list__item advantages-sub-list__item--house">
                 <h4 class="advantages-sub-list__title">Жилье</h4>
                 <p class="advantages-sub-list__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </li>
-              <li class="advantages-sub-list__item">
+              <li class="advantages-sub-list__item advantages-sub-list__item--food">
                 <h4 class="advantages-sub-list__title">Еда</h4>
                 <p class="advantages-sub-list__text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
               </li>
-              <li class="advantages-sub-list__item">
+              <li class="advantages-sub-list__item advantages-sub-list__item--gift">
                 <h4 class="advantages-sub-list__title">Сувениры</h4>
                 <p class="advantages-sub-list__text">Не только китайского, но и местного производства!</p>
               </li>
@@ -96,17 +97,17 @@
         <p class="social__title">#visitSEDONA</p>
         <ul class="social__list">
           <li class="social__item">
-            <a class="button social__link" href="#">
+            <a class="button social__link social__link--vk" href="#">
               <span class="visually-hidden">Наш вконтаке</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="button social__link" href="#">
+            <a class="button social__link social__link--telegram" href="#">
               <span class="visually-hidden">Наш телеграмм</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="button social__link" href="#">
+            <a class="button social__link social__link--youtube" href="#">
               <span class="visually-hidden">Наш канал на YouTube</span>
             </a>
           </li>
@@ -119,5 +120,6 @@
         </div>
       </section>
     </footer>
+    <script src="js/main.js" type="module" defer></script>
   </body>
 </html>

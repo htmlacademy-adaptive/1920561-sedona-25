@@ -54,6 +54,44 @@
 }
 
 .social__link {
+  position: relative;
   width: 48px;
   height: 48px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}
+
+.social__link--vk {
+  &::before {
+    background-image: url("../img/vk-ico.svg");
+  }
+}
+
+.social__link--telegram {
+  &::before {
+    background-image: url("../img/telegram-ico.svg");
+  }
+}
+
+.social__link--youtube {
+  &::before {
+    background-image: url("../img/youtube-ico.svg");
+  }
 }
