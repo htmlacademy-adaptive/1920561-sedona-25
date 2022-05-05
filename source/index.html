@@ -10,7 +10,7 @@
     <header class="page__header">
       <nav class="navigation">
         <a class="navigation__logo-link"></a>
-        <button class="navigation__button navigation__button--no-js" type="button"><span class="navigation__button-marker"></span></button>
+        <button class="navigation__button navigation__button--no-js" type="button"><span class="visually-hidden">Открыть меню навигации</span></button>
         <ul class="navigation__list navigation__list--no-js">
           <li class="navigation__item navigation__item--current">
             <a class="navigation__link navigation__link--current">Главная</a>
@@ -120,18 +120,6 @@
         </div>
       </section>
     </footer>
-    <script>
-      const navMain = document.querySelector('.navigation__list');
-      const navToggle = document.querySelector('.navigation__button');
-
-      navMain.classList.remove('navigation__list--no-js');
-      navMain.classList.add('navigation__list--closed');
-      navToggle.classList.remove('navigation__button--no-js');
-
-      navToggle.addEventListener('click', () => {
-        navToggle.classList.toggle('navigation__button--opened');
-        navMain.classList.toggle('navigation__list--closed');
-      })
-    </script>
+    <script src="js/main.js" type="module" defer></script>
   </body>
 </html>
