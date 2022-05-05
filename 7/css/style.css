@@ -412,36 +412,9 @@ template {
   height: 22px;
   border: none;
   background-color: transparent;
-}
-.navigation__button::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 22px;
-  height: 4px;
-  top: 0;
-  left: 0;
-  background-color: #81b3d2;
-}
-.navigation__button::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 22px;
-  height: 4px;
-  bottom: 0;
-  left: 0;
-  background-color: #81b3d2;
-}
-.navigation__button .navigation__button-marker {
-  position: absolute;
-  display: block;
-  width: 22px;
-  height: 4px;
-  top: 50%;
-  left: 0;
-  background-color: #81b3d2;
-  transform: translateY(-50%);
+  background-image: url("../img/open-nav-ico.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 @media (min-width: 768px) {
   .navigation__button {
@@ -452,38 +425,12 @@ template {
   display: none;
 }
 .navigation__button--opened {
-  background-color: transparent;
-  width: 23px;
-}
-.navigation__button--opened::before {
-  display: none;
-}
-.navigation__button--opened::after {
-  display: none;
-}
-.navigation__button--opened .navigation__button-marker {
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
   background-image: url("../img/close-nav-ico.svg");
-  background-size: contain;
 }
-.navigation__button:hover::before {
+.navigation__button:hover {
   opacity: 0.6;
 }
-.navigation__button:hover::after {
-  opacity: 0.6;
-}
-.navigation__button:hover .navigation__button-marker {
-  opacity: 0.6;
-}
-.navigation__button:active::before {
-  opacity: 0.3;
-}
-.navigation__button:active::after {
-  opacity: 0.3;
-}
-.navigation__button:active .navigation__button-marker {
+.navigation__button:active {
   opacity: 0.3;
 }
 .navigation__list,
@@ -528,11 +475,9 @@ template {
   }
 }
 .navigation__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  max-width: 100%;
   min-height: 55px;
-  min-width: 100%;
   border-bottom: 1px solid rgba(1, 1, 1, 0.2);
 }
 .navigation__item:not(:first-of-type) {
@@ -547,60 +492,60 @@ template {
     box-shadow: none;
   }
 }
-.navigation__item:not(.navigation__item--current):hover {
-  background-color: #669ec0;
-}
-.navigation__item:not(.navigation__item--current):active {
-  background-color: #5496bd;
-}
-.navigation__item:not(.navigation__item--current):active .navigation__link {
-  opacity: 0.3;
-}
 @media (min-width: 768px) {
   .navigation__item {
     border: none;
-    box-shadow: none;
-    min-width: 153px;
+    width: 153px;
+    max-width: max-content;
     min-height: 56px;
   }
   .navigation__item:nth-of-type(2) {
     margin-right: 153px;
   }
-  .navigation__item:not(.navigation__item--current):hover {
-    background-color: transparent;
-  }
-  .navigation__item:not(.navigation__item--current):hover .navigation__link {
-    color: #81b3d2;
-  }
-  .navigation__item:not(.navigation__item--current):active {
-    background-color: transparent;
-  }
-  .navigation__item:not(.navigation__item--current):active .navigation__link {
-    color: #000000;
-    opacity: 0.3;
-  }
 }
 @media (min-width: 1200px) {
   .navigation__item {
-    min-width: 239px;
+    width: 239px;
+    max-width: max-content;
   }
   .navigation__item:nth-of-type(2) {
     margin-right: 239px;
   }
 }
 .navigation__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #ffffff;
+  width: inherit;
+  min-height: inherit;
+  box-sizing: border-box;
+  padding: 5px 5px;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
 }
+.navigation__link:not(.navigation__link--current):hover {
+  background-color: #669ec0;
+}
+.navigation__link:not(.navigation__link--current):active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
 @media (min-width: 768px) {
   .navigation__link {
     color: #000000;
     font-size: 14px;
     line-height: 21px;
+  }
+  .navigation__link:not(.navigation__link--current):hover {
+    color: #81b3d2;
+    background-color: transparent;
+  }
+  .navigation__link:not(.navigation__link--current):active {
+    color: rgba(0, 0, 0, 0.3);
   }
 }
 .navigation__link--current {
