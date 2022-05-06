@@ -124,15 +124,31 @@
 
 .feed__likes {
   display: flex;
+  align-items: flex-end;
 }
 
 .feed__button-likes {
+  cursor: pointer;
   width: 23px;
   height: 21px;
-  background-color: #ffffff;
+  background-color: transparent;
   border: none;
   padding: 0;
   margin-right: 14px;
+  margin-bottom: 5px;
+}
+
+.feed__likes-ico {
+  display: block;
+  width: inherit;
+  height: inherit;
+  background-image: url("../img/like-ico-dark.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/like-ico-light.svg");
+  }
 }
 
 .feed__like-count {

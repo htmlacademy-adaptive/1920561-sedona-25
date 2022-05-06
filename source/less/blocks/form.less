@@ -55,6 +55,34 @@
 }
 
 .form__fieldset--contacts {
+  .form__label {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 58px;
+      width: 58px;
+      top: 21px;
+      right: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .form__label:first-of-type {
+    &::after {
+      background-image: url("../img/input-tel-ico.svg");
+    }
+  }
+
+  .form__label:nth-of-type(2) {
+    &::after {
+      background-image: url("../img/input-email-ico.svg");
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding-left: 44px;
   }
@@ -155,6 +183,16 @@
   margin-bottom: 16px;
   box-sizing: border-box;
   border: none;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 4px #e5e5e5;
+  }
 }
 
 .form__list {
@@ -247,6 +285,11 @@
   }
 }
 
+.form__input-checkbox:focus ~ .form__marker-checkbox,
+.form__input-radio:focus ~ .form__marker-radio {
+  background-color: #e5e5e5;
+}
+
 .form__list .form__label:active {
   .form__marker-checkbox,
   .form__marker-radio {
@@ -266,6 +309,16 @@
   background-color: @light-grey;
   height: 150px;
   box-sizing: border-box;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 4px #e5e5e5;
+  }
 
   @media (min-width: @desktop-width) {
     margin: 0 auto;
