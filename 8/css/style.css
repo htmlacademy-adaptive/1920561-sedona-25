@@ -1245,14 +1245,6 @@ template {
   display: block;
   width: inherit;
   height: inherit;
-  background-image: url("../img/like-ico-dark.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-@media (min-width: 1200px) {
-  .feed__likes-ico {
-    background-image: url("../img/like-ico-light.svg");
-  }
 }
 .feed__like-count {
   font-weight: 700;
@@ -1385,10 +1377,10 @@ template {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.form__fieldset--contacts .form__label:first-of-type::after {
+.form__fieldset--contacts .form__label--phone::after {
   background-image: url("../img/input-tel-ico.svg");
 }
-.form__fieldset--contacts .form__label:nth-of-type(2)::after {
+.form__fieldset--contacts .form__label--email::after {
   background-image: url("../img/input-email-ico.svg");
 }
 @media (min-width: 768px) {
