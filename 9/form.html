@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Форма отзыва об отдыхе в Седоне</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <base href="https://htmlacademy-adaptive.github.io/1920561-sedona-25/9/">
+</head>
+  <body class="page__body">
+    <header class="page__header">
+      <nav class="navigation">
+        <a class="navigation__logo-link" href="index.html"></a>
+        <button class="navigation__button navigation__button--no-js" type="button"><span class="visually-hidden">Открыть меню навигации</span></button>
+        <ul class="navigation__list navigation__list--no-js">
+          <li class="navigation__item">
+            <a class="navigation__link" href="index.html">Главная</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="catalog.html">Фото и видео</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--current">Форма Отзыва</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTMLAcademy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page__main">
+      <section class="greetings greetings--inner">
+        <img class="greetings__image greetings__image--inner" src="./img/greetings-inner-image.svg" width="229" height="39" alt="Седона">
+        <h1 class="greetings__title">Оставьте свой отзыв</h1>
+        <p class="greetings__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </section>
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form__fieldset form__fieldset--name">
+          <legend class="form__title">Представьтесь:</legend>
+          <label class="form__label" for="name">Имя*:</label>
+          <input class="form__input-text" type="text" id="name" name="name" value="Пётр" required>
+          <label class="form__label" for="sur-name">Фамилия*:</label>
+          <input class="form__input-text " type="text" id="sur-name" name="sur-name" value="Пустота" required>
+          <label class="form__label" for="patronymic">Отчество:</label>
+          <input class="form__input-text" type="text" id="patronymic" name="patronymic" value="Викторович">
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--contacts">
+          <legend class="form__title">Контактная информация:</legend>
+          <label class="form__label form__label--phone" for="phone-number">Контактный телефон*:</label>
+          <input class="form__input-text" type="tel" id="phone-number" name="phone-number" placeholder="Введите телефон" required>
+          <label class="form__label form__label--email" for="email">Электронная почта*:</label>
+          <input class="form__input-text" type="email" id="email" name="email" placeholder="Введите e-mail" required>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--emotions">
+          <legend class="form__title">Ваше общее впечатление:</legend>
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__label form__label--checkbox" for="good-emotions">
+                <input class="visually-hidden form__input-radio" type="radio" id="good-emotions" name="emotions" value="good-emotions" checked>
+                <span class="form__marker-radio"></span>Скорее положительное
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label form__label--checkbox" for="bad-emotions">
+                <input class="visually-hidden form__input-radio" type="radio" id="bad-emotions" name="emotions" value="bad-emotions">
+                <span class="form__marker-radio"></span>Скорее отрицательное
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label form__label--checkbox" for="no-emotions">
+                <input class="visually-hidden form__input-radio" type="radio" id="no-emotions" name="emotions" value="no-emotions">
+                <span class="form__marker-radio"></span>Затрудняюсь ответить
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--places">
+          <legend class="form__title">Посещенные достопримечательности:</legend>
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__label form__label--checkbox" for="devil-bridge">
+                <input class="visually-hidden form__input-checkbox" type="checkbox" id="devil-bridge" name="devil-bridge" checked>
+                <span class="form__marker-checkbox"></span>Мост Дьявола
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label form__label--checkbox" for="bell-mountain">
+                <input class="visually-hidden form__input-checkbox" type="checkbox" id="bell-mountain" name="bell-mountain" checked>
+                <span class="form__marker-checkbox"></span>Гора-Колокол
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label form__label--checkbox" for="slide-park">
+                <input class="visually-hidden form__input-checkbox" type="checkbox" id="slide-park" name="slide-park" checked>
+                <span class="form__marker-checkbox"></span>Слайд-парк
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label form__label--checkbox" for="red-rocks">
+                <input class="visually-hidden form__input-checkbox" type="checkbox" id="red-rocks" name="red-rocks">
+                <span class="form__marker-checkbox"></span>Красные скалы
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--comment">
+          <legend class="form__title">Опишите свои эмоции:</legend>
+          <textarea class="form__input-comment" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
+        </fieldset>
+        <button type="submit" class="button form__button">Отправить отзыв</button>
+        <span class="form__required-text">* — обязательные поля</span>
+      </form>
+    </main>
+    <footer class="page__footer">
+      <section class="social">
+        <h3 class="visually-hidden">Наши социальные сети:</h3>
+        <p class="social__title">#visitSEDONA</p>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="button social__link social__link--vk" href="#">
+              <span class="visually-hidden">Наш вконтаке</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="button social__link social__link--telegram" href="#">
+              <span class="visually-hidden">Наш телеграмм</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="button social__link social__link--youtube" href="#">
+              <span class="visually-hidden">Наш канал на YouTube</span>
+            </a>
+          </li>
+        </ul>
+        <div class="developer">
+          <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+            <p class="developer__text">Разработано:</p>
+            <span class="visually-hidden">Лендинг интенсива «HTML и CSS. Адаптивная вёрстка и автоматизация».</span>
+          </a>
+        </div>
+      </section>
+    </footer>
+    <div class="modal modal--error modal--hidden">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Что-то пошло не так!</h2>
+        <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="button modal__button modal__button--error" type="button">ОК</button>
+      </div>
+    </div>
+    <div class="modal modal--success modal--hidden">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+        <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы опубликуем его на сайте.</p>
+        <div class="modal__button-wrapper">
+          <button class="button modal__button modal__button--success" type="button">закрыть окно</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js" type="module" defer></script>
+  </body>
+</html>
