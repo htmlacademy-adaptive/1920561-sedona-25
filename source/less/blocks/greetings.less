@@ -17,11 +17,21 @@
   background-image: url("../img/greetings-bg.jpg");
   background-position: top;
   background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/greetings-bg@2x.jpg");
+    background-size: cover;
+  }
 
   @media (min-width: @tablet-width) {
     height: 518px;
     background-image: url("../img/greetings-bg-tablet-desktop.jpg");
     background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/greetings-bg-tablet-desktop@2x.jpg");
+    }
   }
 }
 
@@ -51,7 +61,6 @@
     @media (min-width: @tablet-width) {
       top: -95px;
       height: 290px;
-      background-image: url("../img/greetings-bg-tablet-desktop.jpg");
     }
 
     @media (min-width: @desktop-width) {
