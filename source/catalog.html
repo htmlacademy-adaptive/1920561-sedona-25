@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Птушетествие в Седону</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="page__header">
@@ -29,7 +33,7 @@
     </header>
     <main class="page__main">
       <section class="greetings greetings--inner">
-        <img class="greetings__image greetings__image--inner" src="./img/greetings-inner-image.png" width="229" height="39" alt="Седона">
+        <img class="greetings__image greetings__image--inner" src="./img/greetings/greetings-inner-image.svg" width="229" height="39" alt="Седона">
         <h1 class="greetings__title">Фото и видео</h1>
         <p class="greetings__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
       </section>
@@ -37,7 +41,11 @@
         <h2 class="visually-hidden">Лента фотографий пользователей</h2>
         <ul class="feed__list">
           <li class="feed__item feed__item--panorama">
-            <img class="feed__img feed__img--panorama" src="./img/catalog-photo-boris.jpg" alt="Неродные просторы">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/catalog/catalog-photo-boris-desktop.jpg 1x, ./img/catalog/catalog-photo-boris-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/catalog/catalog-photo-boris-tablet.jpg 1x, ./img/catalog/catalog-photo-boris-tablet@2x.jpg 2x">
+              <img class="feed__img feed__img--panorama" src="./img/catalog/catalog-photo-boris.jpg" srcset="./img/catalog/catalog-photo-boris@2x.jpg 2x" alt="Неродные просторы">
+            </picture>
             <div class="feed__wrapper">
               <div class="feed__text-wrapper">
                 <h3 class="feed__title">Неродные просторы</h3>
@@ -53,7 +61,11 @@
             </div>
           </li>
           <li class="feed__item">
-            <img class="feed__img" src="./img/catalog-photo-sergey.jpg" alt="Местная растительность">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/catalog/catalog-photo-sergey-desktop.jpg 1x, ./img/catalog/catalog-photo-sergey-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/catalog/catalog-photo-sergey-tablet.jpg 1x, ./img/catalog/catalog-photo-sergey-tablet@2x.jpg 2x">
+              <img class="feed__img" src="./img/catalog/catalog-photo-sergey.jpg" srcset="./img/catalog/catalog-photo-sergey@2x.jpg 2x" alt="Местная растительность">
+            </picture>
             <div class="feed__wrapper">
               <div class="feed__text-wrapper">
                 <h3 class="feed__title">Местная растительность</h3>
@@ -69,7 +81,11 @@
             </div>
           </li>
           <li class="feed__item">
-            <img class="feed__img" src="./img/catalog-photo-petr.jpg" alt="Дорога на север">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/catalog/catalog-photo-petr-desktop.jpg 1x, ./img/catalog/catalog-photo-petr-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/catalog/catalog-photo-petr-tablet.jpg 1x, ./img/catalog/catalog-photo-petr-tablet@2x.jpg 2x">
+              <img class="feed__img" src="./img/catalog/catalog-photo-petr.jpg" srcset="./img/catalog/catalog-photo-petr@2x.jpg 2x" alt="Дорога на север">
+            </picture>
             <div class="feed__wrapper">
               <div class="feed__text-wrapper">
                 <h3 class="feed__title">Дорога на север</h3>
@@ -85,7 +101,11 @@
             </div>
           </li>
           <li class="feed__item">
-            <img class="feed__img" src="./img/catalog-photo-anton.jpg" alt="Мост дьявола">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/catalog/catalog-photo-anton-desktop.jpg 1x, ./img/catalog/catalog-photo-anton-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/catalog/catalog-photo-anton-tablet.jpg 1x, ./img/catalog/catalog-photo-anton-tablet@2x.jpg 2x">
+              <img class="feed__img" src="./img/catalog/catalog-photo-anton.jpg" srcset="./img/catalog/catalog-photo-anton@2x.jpg 2x" alt="Мост дьявола">
+            </picture>
             <div class="feed__wrapper">
               <div class="feed__text-wrapper">
                 <h3 class="feed__title">Мост дьявола</h3>

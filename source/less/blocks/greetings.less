@@ -14,14 +14,24 @@
   top: -87px;
   left: 0;
   background-color: rgba(@main-blue, 0.6);
-  background-image: url("../img/greetings-bg.jpg");
+  background-image: url("../img/greetings/greetings-bg.jpg");
   background-position: top;
   background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/greetings/greetings-bg@2x.jpg");
+    background-size: cover;
+  }
 
   @media (min-width: @tablet-width) {
     height: 518px;
-    background-image: url("../img/greetings-bg-tablet-desktop.jpg");
+    background-image: url("../img/greetings/greetings-bg-tablet-desktop.jpg");
     background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/greetings/greetings-bg-tablet-desktop@2x.jpg");
+    }
   }
 }
 
@@ -33,7 +43,7 @@
   height: 57px;
   top: 245px;
   left: 0;
-  background-image: url("../img/greetings-triangle.svg");
+  background-image: url("../img/greetings/greetings-triangle.svg");
   background-position: center;
   background-size: cover;
 
@@ -51,7 +61,6 @@
     @media (min-width: @tablet-width) {
       top: -95px;
       height: 290px;
-      background-image: url("../img/greetings-bg-tablet-desktop.jpg");
     }
 
     @media (min-width: @desktop-width) {

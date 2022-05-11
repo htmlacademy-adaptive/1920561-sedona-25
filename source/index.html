@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Птушетествие в Седону</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="page__header">
@@ -30,7 +34,7 @@
     <main class="page__main">
       <section class="greetings">
         <h1 class="visually-hidden">Добро пожаловать на сайт города Седона</h1>
-        <img class="greetings__image" src="./img/greetings-image.png" width="282" height="214" alt="Добро пожаловать на сайт города Седона">
+        <img class="greetings__image" src="./img/greetings/greetings-image.svg" width="282" height="214" alt="Добро пожаловать на сайт города Седона">
         <p class="greetings__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="greetings__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
@@ -43,7 +47,12 @@
               <p class="advantages__text">— №1 —</p>
               <p class="advantages__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img class="advantages__photo" src="./img/advantages-photo-city.jpg" alt="Город Седона">
+            <div class="advantages__photo-wrapper">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./img/advantages/advantages-photo-city-desktop.jpg 1x, ./img/advantages/advantages-photo-city-desktop@2x.jpg 2x">
+                <img class="advantages__photo" src="./img/advantages/" srcset="./img/advantages/advantages-photo-city@2x.jpg 2x" width="320" height="260" alt="Город Седона">
+              </picture>
+            </div>
             <ul class="advantages-sub-list">
               <li class="advantages-sub-list__item advantages-sub-list__item--house">
                 <h4 class="advantages-sub-list__title">Жилье</h4>
@@ -65,7 +74,12 @@
               <p class="advantages__text">— №2 —</p>
               <p class="advantages__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img class="advantages__photo" src="./img/advantages-photo-bridge.jpg" alt="Город Седона">
+            <div class="advantages__photo-wrapper">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/advantages/advantages-photo-bridge-desktop.jpg 1x, ./img/advantages/advantages-photo-bridge-desktop@2x.jpg 2x">
+              <img class="advantages__photo" src="./img/advantages/advantages-photo-bridge.jpg" srcset="./img/advantages/advantages-photo-bridge@2x.jpg 2x" width="320" height="260" alt="Город Седона">
+            </picture>
+            </div>
           </li>
           <li class="advantages__item">
             <h3 class="advantages__title">Небольшая площадь</h3>
