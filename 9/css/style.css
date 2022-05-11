@@ -412,7 +412,7 @@ template {
   height: 22px;
   border: none;
   background-color: transparent;
-  background-image: url("../img/open-nav-ico.svg");
+  background-image: url("../img/icons/open-nav-ico.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -425,7 +425,7 @@ template {
   display: none;
 }
 .navigation__button--opened {
-  background-image: url("../img/close-nav-ico.svg");
+  background-image: url("../img/icons/close-nav-ico.svg");
 }
 .navigation__button:hover {
   opacity: 0.6;
@@ -566,27 +566,27 @@ template {
   top: -87px;
   left: 0;
   background-color: rgba(129, 179, 210, 0.6);
-  background-image: url("../img/greetings-bg.jpg");
+  background-image: url("../img/greetings/greetings-bg.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .greetings::before {
-    background-image: url("../img/greetings-bg@2x.jpg");
+    background-image: url("../img/greetings/greetings-bg@2x.jpg");
     background-size: cover;
   }
 }
 @media (min-width: 768px) {
   .greetings::before {
     height: 518px;
-    background-image: url("../img/greetings-bg-tablet-desktop.jpg");
+    background-image: url("../img/greetings/greetings-bg-tablet-desktop.jpg");
     background-position: center;
   }
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
   .greetings::before {
-    background-image: url("../img/greetings-bg-tablet-desktop@2x.jpg");
+    background-image: url("../img/greetings/greetings-bg-tablet-desktop@2x.jpg");
   }
 }
 .greetings::after {
@@ -597,7 +597,7 @@ template {
   height: 57px;
   top: 245px;
   left: 0;
-  background-image: url("../img/greetings-triangle.svg");
+  background-image: url("../img/greetings/greetings-triangle.svg");
   background-position: center;
   background-size: cover;
 }
@@ -731,9 +731,11 @@ template {
 }
 @media (min-width: 768px) {
   .advantages__item {
-    border: none;
     width: 256px;
     padding: 0 35px;
+  }
+  .advantages__item:not(:last-of-type) {
+    border-bottom: 0;
   }
 }
 .advantages__item-wrapper .advantages__title {
@@ -776,7 +778,7 @@ template {
     left: 0;
     width: 100%;
     height: 37px;
-    background-image: url("../img/advantages-triangle.svg");
+    background-image: url("../img/advantages/advantages-triangle.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -914,7 +916,7 @@ template {
   }
 }
 .advantages-sub-list__item--house::before {
-  background-image: url("../img/house-ico.svg");
+  background-image: url("../img/icons/house-ico.svg");
 }
 @media (min-width: 768px) {
   .advantages-sub-list__item--house::before {
@@ -923,7 +925,7 @@ template {
   }
 }
 .advantages-sub-list__item--food::before {
-  background-image: url("../img/food-ico.svg");
+  background-image: url("../img/icons/food-ico.svg");
 }
 @media (min-width: 768px) {
   .advantages-sub-list__item--food::before {
@@ -932,7 +934,7 @@ template {
   }
 }
 .advantages-sub-list__item--gift::before {
-  background-image: url("../img/gift-ico.svg");
+  background-image: url("../img/icons/gift-ico.svg");
 }
 @media (min-width: 768px) {
   .advantages-sub-list__item--gift::before {
@@ -1088,13 +1090,13 @@ template {
   opacity: 0.3;
 }
 .social__link--vk::before {
-  background-image: url("../img/vk-ico.svg");
+  background-image: url("../img/icons/vk-ico.svg");
 }
 .social__link--telegram::before {
-  background-image: url("../img/telegram-ico.svg");
+  background-image: url("../img/icons/telegram-ico.svg");
 }
 .social__link--youtube::before {
-  background-image: url("../img/youtube-ico.svg");
+  background-image: url("../img/icons/youtube-ico.svg");
 }
 @media (min-width: 768px) {
   .developer {
@@ -1396,10 +1398,10 @@ template {
   background-size: contain;
 }
 .form__fieldset--contacts .form__label--phone::after {
-  background-image: url("../img/input-tel-ico.svg");
+  background-image: url("../img/icons/input-tel-ico.svg");
 }
 .form__fieldset--contacts .form__label--email::after {
-  background-image: url("../img/input-email-ico.svg");
+  background-image: url("../img/icons/input-email-ico.svg");
 }
 @media (min-width: 768px) {
   .form__fieldset--contacts {
@@ -1573,7 +1575,7 @@ template {
   display: block;
   width: 22px;
   height: 16px;
-  background-image: url("../img/check-ico.svg");
+  background-image: url("../img/icons/check-ico.svg");
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
