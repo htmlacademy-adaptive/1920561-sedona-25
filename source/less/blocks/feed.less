@@ -136,12 +136,41 @@
   padding: 0;
   margin-right: 14px;
   margin-bottom: 5px;
+
+  &:hover {
+    .feed__likes-ico {
+      opacity: 1;
+      fill: @main-blue;
+    }
+  }
+
+  &:active {
+    .feed__likes-ico {
+      opacity: 0.6;
+      fill: #000000;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:active {
+      .feed__likes-ico {
+        fill: #ffffff;
+      }
+    }
+  }
 }
 
 .feed__likes-ico {
   display: block;
   width: inherit;
   height: inherit;
+  opacity: 0.3;
+  fill: #000000;
+
+  @media (min-width: @desktop-width) {
+    opacity: 1;
+    fill: #ffffff;
+  }
 }
 
 .feed__like-count {

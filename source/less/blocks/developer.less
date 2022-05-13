@@ -9,17 +9,34 @@
 }
 
 .developer__link {
+  position: relative;
+  display: flex;
+  min-height: 35px;
+  align-items: center;
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
 
   &:hover {
     color: @main-blue;
+
+    .developer__icon {
+      fill: @main-blue;
+    }
   }
 
   &:active {
     color: #b3b3b3;
+
+    .developer__icon {
+      fill: #b3b3b3;
+    }
   }
+}
+
+.developer__icon {
+  position: absolute;
+  right: 0;
 }
 
 .developer__text {
