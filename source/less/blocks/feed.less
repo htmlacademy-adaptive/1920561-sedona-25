@@ -1,12 +1,14 @@
 .feed {
+  padding-top: 10px;
+
   @media (min-width: @tablet-width) {
-    padding-top: 7px;
-    margin-bottom: 58px;
+    padding-top: 23px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 21px;
-    margin-bottom: 77px;
+    padding-top: 29px;
+    margin-bottom: 59px;
   }
 }
 
@@ -31,6 +33,7 @@
 }
 
 .feed__item {
+  position: relative;
   padding: 25px 20px;
   border-top: 1px solid #e5e5e5;
 
@@ -59,7 +62,20 @@
   }
 }
 
+.feed__link {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  width: 280px;
+  height: 280px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .feed__img {
+  margin: 0 auto;
   display: block;
 
   @media (min-width: @tablet-width) {
