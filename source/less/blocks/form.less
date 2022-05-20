@@ -11,18 +11,18 @@
     display: grid;
     width: 648px;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 48px;
     border: none;
     padding-top: 47px;
     padding-bottom: 0;
     margin-bottom: 64px;
+    row-gap: 42px;
   }
 
   @media (min-width: @desktop-width) {
     width: 960px;
     grid-template-columns: repeat(2, 480px);
     padding-top: 17px;
-    row-gap: 56px;
+    row-gap: 47px;
   }
 }
 
@@ -48,6 +48,7 @@
 
 .form__fieldset--name {
   @media (min-width: @tablet-width) {
+    margin-bottom: 6px;
     padding-right: 43px;
     border-right: 1px solid #dbdbdb;
 
@@ -57,6 +58,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 9px;
     padding-right: 27px;
     border-right: none;
 
@@ -119,6 +121,7 @@
   @media (min-width: @tablet-width) {
     grid-column: 1 / -1;
     border-top: 1px solid #dbdbdb;
+    margin-bottom: 6px;
 
     .form__title {
       padding: 0 65px;
@@ -131,6 +134,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
+
     .form__list {
       width: 100%;
       padding: 17px 53px;
@@ -143,7 +148,6 @@
   @media (min-width: @tablet-width) {
     grid-column: 1 / -1;
     border-top: 1px solid #dbdbdb;
-    margin-bottom: -5px;
 
     .form__list {
       width: 480px;
@@ -159,7 +163,7 @@
 
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 0;
+    margin-bottom: 10px;
 
     .form__list {
       width: 100%;
@@ -177,7 +181,7 @@
   @media (min-width: @tablet-width) {
     grid-column: 1 / -1;
     border-top: 1px solid #dbdbdb;
-    margin-bottom: 0;
+    margin-bottom: 8px;
 
     .form__title {
       padding: 0 76px;
@@ -186,7 +190,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: -9px;
+    margin-bottom: 0;
   }
 }
 
