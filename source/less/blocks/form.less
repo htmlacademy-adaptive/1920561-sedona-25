@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   margin: 0 auto;
   padding-top: 24px;
+  padding-bottom: 27px;
   box-sizing: border-box;
   border-top: 1px solid #e5e5e5;
 
@@ -13,12 +14,14 @@
     row-gap: 48px;
     border: none;
     padding-top: 47px;
+    padding-bottom: 0;
     margin-bottom: 64px;
   }
 
   @media (min-width: @desktop-width) {
     width: 960px;
-    padding-top: 22px;
+    grid-template-columns: repeat(2, 480px);
+    padding-top: 17px;
     row-gap: 56px;
   }
 }
@@ -27,16 +30,17 @@
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
-  width: 100%;
   margin: 0;
-  padding: 20px 20px 39px;
-  margin-bottom: 24px;
+  padding: 20px;
+  margin-bottom: 27px;
   border: none;
   border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    border: none;
     width: auto;
+    border: none;
     padding: 0;
     margin: 0;
   }
@@ -45,12 +49,21 @@
 .form__fieldset--name {
   @media (min-width: @tablet-width) {
     padding-right: 43px;
-    padding-bottom: 15px;
     border-right: 1px solid #dbdbdb;
+
+    .form__title {
+      padding-left: 41px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 63px;
+    padding-right: 27px;
+    border-right: none;
+
+    .form__label,
+    .form__input-text {
+      margin-right: 22px;
+    }
   }
 }
 
@@ -64,8 +77,9 @@
       display: block;
       height: 58px;
       width: 58px;
-      top: 21px;
+      bottom: 0;
       right: 0;
+      transform: translateY(100%);
       background-repeat: no-repeat;
       background-size: contain;
     }
@@ -84,11 +98,20 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-left: 44px;
+    .form__label,
+    .form__input-text {
+      margin-left: 44px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 63px;
+    margin-left: 13px;
+    border-left: 1px solid #dbdbdb;
+
+    .form__label,
+    .form__input-text {
+      margin-left: 65px;
+    }
   }
 }
 
@@ -100,13 +123,18 @@
     .form__title {
       padding: 0 65px;
     }
+
+    .form__list {
+      width: 576px;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (min-width: @desktop-width) {
     .form__list {
+      width: 100%;
       padding: 17px 53px;
-      grid-template-columns: repeat(3, max-content);
-      column-gap: 64px;
+      column-gap: 0;
     }
   }
 }
@@ -115,24 +143,28 @@
   @media (min-width: @tablet-width) {
     grid-column: 1 / -1;
     border-top: 1px solid #dbdbdb;
+    margin-bottom: -5px;
 
     .form__list {
-      grid-template-columns: repeat(2, 224px);
+      width: 480px;
+      grid-template-columns: repeat(2, 1fr);
       column-gap: 32px;
     }
 
     .form__title {
       width: 308px;
-      padding: 0 47px;
+      padding: 0 64px;
     }
   }
 
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+
     .form__list {
+      width: 100%;
       padding: 31px 44px;
-      grid-template-columns: repeat(4, max-content);
-      column-gap: 64px;
+      column-gap: 0;
     }
   }
 }
@@ -149,7 +181,12 @@
 
     .form__title {
       padding: 0 76px;
+      margin-bottom: 28px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: -9px;
   }
 }
 
@@ -177,7 +214,6 @@
   line-height: 26px;
   color: #000000;
   background-color: @light-grey;
-  width: 100%;
   height: 58px;
   padding: 16px;
   margin-bottom: 16px;
@@ -203,8 +239,9 @@
   font-size: 18px;
   line-height: 26px;
   list-style-type: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 
   .form__label {
     padding: 0;
@@ -216,10 +253,15 @@
   }
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 280px);
-    gap: 16px;
     margin: 0 auto;
+    display: grid;
+    gap: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -320,6 +362,10 @@
     box-shadow: inset 0 0 0 4px #e5e5e5;
   }
 
+  @media (min-width: @tablet-width) {
+    height: 158px;
+  }
+
   @media (min-width: @desktop-width) {
     margin: 0 auto;
     width: 768px;
@@ -348,10 +394,12 @@
   color: rgba(@light-black, 0.6);
   margin-right: 20px;
   margin-left: auto;
+  padding-left: 20px;
 
   @media (min-width: @tablet-width) {
     align-self: center;
     margin-right: 0;
+    margin-top: 10px;
   }
 
   @media (min-width: @desktop-width) {
