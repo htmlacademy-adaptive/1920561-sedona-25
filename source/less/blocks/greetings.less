@@ -41,7 +41,7 @@
   display: block;
   width: 100%;
   height: 57px;
-  top: 245px;
+  top: 246px;
   left: 0;
   background-image: url("../img/greetings/greetings-triangle.svg");
   background-position: center;
@@ -58,8 +58,8 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  margin: 0 auto 35px auto;
-  padding: 0 25px;
+  margin: 0 auto 37px auto;
+  padding: 0 32px 0 25px;
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
@@ -72,16 +72,17 @@
 .greetings__text {
   background-color: #ffffff;
   color: @light-black;
-  margin: 0 auto 17px;
+  margin: 0 auto 15px;
   padding: 0 20px;
 
   @media (min-width: @tablet-width) {
     max-width: 520px;
-    margin-bottom: 57px;
+    margin-bottom: 53px;
+    line-height: 24px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 44px;
+    margin-bottom: 41px;
   }
 }
 
@@ -121,6 +122,10 @@
       margin-bottom: 35px;
       font-size: 30px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 34px;
+    }
   }
 
   .greetings__text {
@@ -128,6 +133,12 @@
 
     @media (min-width: @tablet-width) {
       margin-bottom: 57px;
+      padding: 0 165px;
+    }
+
+    @media (min-width: @desktop-width) {
+      line-height: 21px;
+      padding: 0 380px;
     }
   }
 }
@@ -141,7 +152,8 @@
 
   .greetings__title {
     @media (min-width: @tablet-width) {
-      margin-bottom: 24px;
+      padding-right: 24px;
+      margin-bottom: 19px;
     }
 
     @media (min-width: @desktop-width) {

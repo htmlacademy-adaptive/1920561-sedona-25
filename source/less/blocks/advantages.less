@@ -22,25 +22,47 @@
   }
 
   @media (min-width: @tablet-width) {
+    align-self: flex-start;
+    width: 250px;
+    padding: 0;
+
     &:not(:last-of-type) {
       border-bottom: 0;
     }
 
     &:not(&--city)&:not(&--bridge) {
-      margin-top: 44px;
+      margin-top: 42px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 350px;
+  }
+}
+
+.advantages__item-wrapper {
+  .advantages__title {
+    color: #ffffff;
+  }
+
+  .advantages__text {
+    color: #ffffff;
+  }
+
+  @media (min-width: @tablet-width) {
     align-self: flex-start;
-    width: 250px;
-    padding: 0;
+
+    .advantages__text:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
 .advantages__item--city {
   background-color: @main-blue;
-  padding: 70px 20px 0;
+  padding: 71px 0 0;
   border: none;
   width: 100%;
-
   position: relative;
 
   &::before {
@@ -56,30 +78,85 @@
     background-position: center;
   }
 
+  .advantages__text:last-of-type {
+    margin-bottom: 39px;
+    padding: 0 20px;
+  }
+
   @media (min-width: @tablet-width) {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .advantages__title {
+      width: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+    }
+
+    .advantages__text {
+      margin-bottom: 25px;
+    }
+
+    .advantages__text:last-of-type {
+      margin-bottom: 0;
+      padding: 0 20px;
+    }
+
     &::before {
       display: none;
     }
 
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    .advantages__item-wrapper {
+      margin-top: 40px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .advantages__item-wrapper {
+      margin-top: 48px;
+    }
+
+    .advantages__text:last-of-type {
+      padding: 0 60px;
+    }
   }
 }
 
 .advantages__item--bridge {
   background-color: @main-blue;
-  padding: 39px 20px 0;
+  padding: 40px 20px 0;
   border: none;
   width: 100%;
+
+  .advantages__text:last-of-type {
+    margin-bottom: 34px;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
+    .advantages__title {
+      width: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+    }
+
+    .advantages__text {
+      margin-bottom: 24px;
+    }
+
+    .advantages__text:last-of-type {
+      margin-bottom: 0;
+      padding: 0 40px;
+    }
+
     .advantages__item-wrapper {
-      padding: 0 30px;
+      margin-top: 45px;
       grid-column: 3 / 4;
     }
 
@@ -88,35 +165,51 @@
       grid-column: 1 / 3;
     }
   }
-}
 
-.advantages__item-wrapper {
-  .advantages__title {
-    color: #ffffff;
-  }
-
-  .advantages__text {
-    color: #ffffff;
-
-    &:last-of-type {
-      margin-bottom: 38px;
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    .advantages__title {
-      width: 150px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 0;
+  @media (min-width: @desktop-width) {
+    .advantages__item-wrapper {
+      margin-top: 52px;
     }
 
     .advantages__text:last-of-type {
-      margin-bottom: 0;
-      padding: 0;
+      padding: 0 90px;
     }
+  }
+}
 
-    padding: 0 35px;
+.advantages__item--place {
+  @media (min-width: @tablet-width) {
+    .advantages__text:last-of-type {
+      padding: 0 20px;
+    }
+  }
+}
+
+.advantages__item--road {
+  @media (min-width: @tablet-width) {
+    .advantages__text:last-of-type {
+      padding: 0 51px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .advantages__text:last-of-type {
+      padding: 0 45px;
+    }
+  }
+}
+
+.advantages__item--tourist {
+  @media (min-width: @tablet-width) {
+    .advantages__text:last-of-type {
+      padding: 0 51px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .advantages__text:last-of-type {
+      padding: 0 40px;
+    }
   }
 }
 
@@ -140,18 +233,21 @@
   text-align: center;
   margin: 0;
   margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 25px;
+  }
 }
 
 .advantages__text:last-of-type {
   margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 40px;
-    padding: 10px 38px 0;
+    margin-bottom: 42px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 59px;
+    margin-bottom: 63px;
     padding: 10px 0 0;
   }
 }
